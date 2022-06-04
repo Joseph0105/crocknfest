@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="billets.css">
+	<title>Achetez vos billets</title>
+</head>
+
+<body>
+
+<header>
+	<div id=logo_croc>
+			<a href="acceuil.html"><img class="logo" src="image/logo2.png" alt="le logo du Crock'N Fest" title="cliquez ici pour agrandir"/></a>
+	</div>
+	<div id="h1"><h1>Achetez vos billets</h1></div>
+</header>
+
+<aside>
+		<table id="camping">
+			<tr>
+				<th class="camping">Camping</th>
+				<th class="camping">Sans camping</th>
+				<th class="camping">VIP</th>
+				<th class="camping">Extras</th>
+			</tr>
+		</table>
+</aside>
+
+<section>
+	<form method="post" action="traitement.php">
+		<table id="pass">
+			<tr>
+				<th class="pass">Pass 3 jours</th>
+			</tr>
+			<tr>
+				<td class="quantité"><label for="quantité">Quantité</label> : <input type="number" name="quantité" max="5" id="quantité"></td>
+			</tr>
+			<tr>
+				<td class="enfant"><label for="enfant">Tarif enfant</label> : <input type="checkbox" name="enfant" id="enfant"></td>
+			</tr>
+			<tr>
+				<td class="acheter"><input type="image" src="image/Acheter.png" name="acheter" height="100px" />
+				</td>
+			</tr>
+		</table>		
+	</form>
+
+	<form method="post" action="traitement.php">
+		<table id="pass">
+			<tr>
+				<th class="pass">Pass 2 jours</th>
+			</tr>
+			<tr>
+				<td class="quantité"><label for="quantité">Quantité</label> : <input type="number" name="quantité" max="5" id="quantité"></td>
+			</tr>
+			<tr>
+				<td class="enfant"><label for="enfant">Tarif enfant</label> : <input type="checkbox" name="enfant" id="enfant"></td>
+			</tr>
+			<tr>
+				<td class="acheter"><input type="image" src="image/Acheter.png" name="acheter" height="100px" />
+				</td>
+			</tr>
+		</table>		
+	</form>
+
+	<form method="post" action="traitement.php">
+		<table id="pass">
+			<tr>
+				<th class="pass">Pass 1 jours</th>
+			</tr>
+			<tr>
+				<td class="quantité"><label for="quantité">Quantité</label> : <input type="number" name="quantité" max="5" id="quantité"></td>
+			</tr>
+			<tr>
+				<td class="enfant"><label for="enfant">Tarif enfant</label> : <input type="checkbox" name="enfant" id="enfant"></td>
+			</tr>
+			<tr>
+				<td class="acheter"><input type="image" src="image/Acheter.png" name="acheter" height="100px"  />
+				</td>
+			</tr>
+		</table>		
+	</form>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,248 @@
+@import "libs/mixins.scss";
+@import "libs/responsive.scss";
+
+@include font; /* font folder */
+
+$primary: #d4cebd;
+$secondary: #ab2816;
+$background: rgb(0, 0, 0);
+body {
+  @include body;
+}
+/* Elements property */
+a {
+  text-decoration: none;
+  font-family: "mephisto";
+  font-size: 2.5em;
+  @media #{$small-screen} {
+    font-size: 1.2em;
+  }
+  color: $primary;
+  &:hover {
+    color: darken($primary, 20);
+  }
+}
+p {
+  color: $primary;
+  font-family: sans-serif;
+  text-align: justify;
+  font-size: 1em;
+  @media #{$small-screen} {
+    font-size: 0.8em;
+  }
+}
+em {
+  font-weight: bold;
+  font-style: normal;
+}
+strong {
+  color: darken($primary, 20);
+}
+/* END */
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header__logo {
+  width: 15rem;
+  height: 15rem;
+  @media #{$small-screen} {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 70%;
+  .nav--compte {
+    font-size: 1.2em;
+    @media #{$small-screen} {
+      font-size: 0.8em;
+    }
+  }
+}
+.nav__menu {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav__running_order {
+  transform: scale(1);
+  transition: transform(400ms);
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.banner {
+  background: url(/image/concert.jpg);
+  width: 100%;
+  height: 360px;
+  position: relative;
+  @media #{$small-screen} {
+    display: none;
+  }
+  .banner__descritpion {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba($background, 0.6);
+    height: 40px;
+    width: 99%;
+    color: $primary;
+    padding-top: 20px;
+  }
+}
+.btn {
+  background: url(/image/clic.png) no-repeat;
+  @include btn;
+  &:hover {
+    background: url(/image/clichover.png);
+    @include btn;
+  }
+}
+
+section {
+  display: flex;
+  justify-content: space-between;
+  @media #{$small-screen} {
+    flex-direction: column;
+  }
+}
+article {
+  text-align: justify;
+  padding: 10px;
+  margin-top: 30px;
+  width: 70%;
+  border: 1px $secondary solid;
+  background-color: rgba($background, 0.6);
+  border-radius: 3px;
+  color: $primary;
+  &:hover {
+    @include box-shadow;
+  }
+  @media #{$small-screen} {
+    width: 90%;
+    margin-left: 3%;
+  }
+}
+aside {
+  border: 1px solid #ab2816;
+  background: url(/image/lineup.png) no-repeat;
+  margin-top: 30px;
+  width: 25%;
+  background-size: 100%;
+  &:hover {
+    @include box-shadow;
+    background: url(/image/lineup_hover.png) no-repeat;
+    background-size: 100%;
+  }
+  @media #{$small-screen} {
+    border: 0;
+    height: 600px;
+    width: auto;
+    background-size: 50%;
+    background-position: center;
+    &:hover {
+      background: url(/image/lineup_hover.png) no-repeat;
+      height: 600px;
+      width: auto;
+      background-size: 50%;
+      background-position: center;
+      box-shadow: 0px 0px 0px;
+    }
+  }
+}
+
+footer {
+  display: flex;
+}
+.footer__network {
+  display: flex;
+}
+.footer__fb {
+  height: 100px;
+  width: 100px;
+  margin-top: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background: url(/image/facebook.png) no-repeat;
+  background-size: 100%;
+}
+.footer__ig {
+  @extend .footer__fb;
+  background: url(/image/instagram.png) no-repeat;
+  background-size: 100%;
+}
+.footer__tw {
+  @extend .footer__fb;
+  background: url(/image/twitter.png) no-repeat;
+  background-size: 100%;
+}
+
+.photo {
+  margin-left: 100px;
+  margin-top: 25px;
+  height: 100%;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: stretch;
+  margin-left: 50px;
+  border: 1px solid $secondary;
+  background-color: rgba($background, 0.6);
+  .photo1 {
+    background: url(/image/photos/p1.jpg);
+    background-size: 100%;
+    height: 180px;
+    width: 180px;
+  }
+  .photo2 {
+    background: url(/image/photos/p2.jpg);
+    @extend .photo1;
+    background-size: 100%;
+  }
+  .photo3 {
+    background: url(/image/photos/p3.jpg);
+    @extend .photo1;
+    background-size: 100%;
+  }
+  .photo4 {
+    background: url(/image/photos/p4.jpg) no-repeat;
+    @extend .photo1;
+    background-size: 100%;
+  }
+  .photo5 {
+    background: url(/image/photos/p5.jpg) no-repeat;
+    @extend .photo1;
+    background-size: 100%;
+    margin-top: 20px;
+  }
+  .photo6 {
+    background: url(/image/photos/p6.jpg) no-repeat;
+    @extend .photo1;
+    background-size: 100%;
+    margin-top: 20px;
+  }
+  .photo7 {
+    background: url(/image/photos/p7.jpg);
+    @extend .photo1;
+    background-size: 100%;
+    margin-top: 20px;
+  }
+  .photo8 {
+    background: url(/image/photos/p8.jpg);
+    @extend .photo1;
+    background-size: 100%;
+    margin-top: 20px;
+  }
+}

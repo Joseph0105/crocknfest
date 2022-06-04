@@ -1,0 +1,29 @@
+@mixin body {
+  width: auto;
+  background: url(/image/fond.png) no-repeat;
+  background-attachment: fixed;
+}
+@mixin font {
+  @font-face {
+    font-family: "mephisto";
+    src: url("/police/mephisto.ttf");
+  }
+  @font-face {
+    font-family: "roboto-regular";
+    src: url("/police/roboto-regular.ttf");
+  }
+}
+@mixin btn {
+  position: absolute;
+  background-size: 100%;
+  height: 90px;
+  width: 90px;
+  right: 40px;
+  bottom: -15px;
+  text-align: center;
+  font-size: 1.5em;
+  padding: 3px 8px 0px 8px;
+}
+@mixin box-shadow {
+  box-shadow: 3px 3px 5px $secondary;
+}

@@ -1,0 +1,288 @@
+@font-face {
+  font-family: "mephisto";
+  src: url("/police/mephisto.ttf");
+}
+@font-face {
+  font-family: "roboto-regular";
+  src: url("/police/roboto-regular.ttf");
+}
+/* font folder */
+body {
+  width: auto;
+  background: url(/image/fond.png) no-repeat;
+  background-attachment: fixed;
+}
+
+/* Elements property */
+a {
+  text-decoration: none;
+  font-family: "mephisto";
+  font-size: 2.5em;
+  color: #d4cebd;
+}
+@media all and (max-width: 1024px) {
+  a {
+    font-size: 1.2em;
+  }
+}
+a:hover {
+  color: #aca07f;
+}
+
+p {
+  color: #d4cebd;
+  font-family: sans-serif;
+  text-align: justify;
+  font-size: 1em;
+}
+@media all and (max-width: 1024px) {
+  p {
+    font-size: 0.8em;
+  }
+}
+
+em {
+  font-weight: bold;
+  font-style: normal;
+}
+
+strong {
+  color: #aca07f;
+}
+
+/* END */
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header__logo {
+  width: 15rem;
+  height: 15rem;
+}
+@media all and (max-width: 1024px) {
+  .header__logo {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 70%;
+}
+nav .nav--compte {
+  font-size: 1.2em;
+}
+@media all and (max-width: 1024px) {
+  nav .nav--compte {
+    font-size: 0.8em;
+  }
+}
+
+.nav__menu {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav__running_order {
+  transform: scale(1);
+  transition: transform(400ms);
+}
+.nav__running_order:hover {
+  transform: scale(1.2);
+}
+
+.banner {
+  background: url(/image/concert.jpg);
+  width: 100%;
+  height: 360px;
+  position: relative;
+}
+@media all and (max-width: 1024px) {
+  .banner {
+    display: none;
+  }
+}
+.banner .banner__descritpion {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 40px;
+  width: 99%;
+  color: #d4cebd;
+  padding-top: 20px;
+}
+
+.btn {
+  background: url(/image/clic.png) no-repeat;
+  position: absolute;
+  background-size: 100%;
+  height: 90px;
+  width: 90px;
+  right: 40px;
+  bottom: -15px;
+  text-align: center;
+  font-size: 1.5em;
+  padding: 3px 8px 0px 8px;
+}
+.btn:hover {
+  background: url(/image/clichover.png);
+  position: absolute;
+  background-size: 100%;
+  height: 90px;
+  width: 90px;
+  right: 40px;
+  bottom: -15px;
+  text-align: center;
+  font-size: 1.5em;
+  padding: 3px 8px 0px 8px;
+}
+
+section {
+  display: flex;
+  justify-content: space-between;
+}
+@media all and (max-width: 1024px) {
+  section {
+    flex-direction: column;
+  }
+}
+
+article {
+  text-align: justify;
+  padding: 10px;
+  margin-top: 30px;
+  width: 70%;
+  border: 1px #ab2816 solid;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 3px;
+  color: #d4cebd;
+}
+article:hover {
+  box-shadow: 3px 3px 5px #ab2816;
+}
+@media all and (max-width: 1024px) {
+  article {
+    width: 90%;
+    margin-left: 3%;
+  }
+}
+
+aside {
+  border: 1px solid #ab2816;
+  background: url(/image/lineup.png) no-repeat;
+  margin-top: 30px;
+  width: 25%;
+  background-size: 100%;
+}
+aside:hover {
+  box-shadow: 3px 3px 5px #ab2816;
+  background: url(/image/lineup_hover.png) no-repeat;
+  background-size: 100%;
+}
+@media all and (max-width: 1024px) {
+  aside {
+    border: 0;
+    height: 600px;
+    width: auto;
+    background-size: 50%;
+    background-position: center;
+  }
+  aside:hover {
+    background: url(/image/lineup_hover.png) no-repeat;
+    height: 600px;
+    width: auto;
+    background-size: 50%;
+    background-position: center;
+    box-shadow: 0px 0px 0px;
+  }
+}
+
+footer {
+  display: flex;
+}
+
+.footer__network {
+  display: flex;
+}
+
+.footer__fb, .footer__tw, .footer__ig {
+  height: 100px;
+  width: 100px;
+  margin-top: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background: url(/image/facebook.png) no-repeat;
+  background-size: 100%;
+}
+
+.footer__ig {
+  background: url(/image/instagram.png) no-repeat;
+  background-size: 100%;
+}
+
+.footer__tw {
+  background: url(/image/twitter.png) no-repeat;
+  background-size: 100%;
+}
+
+.photo {
+  margin-left: 100px;
+  margin-top: 25px;
+  height: 100%;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: stretch;
+  margin-left: 50px;
+  border: 1px solid #ab2816;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.photo .photo1, .photo .photo8, .photo .photo7, .photo .photo6, .photo .photo5, .photo .photo4, .photo .photo3, .photo .photo2 {
+  background: url(/image/photos/p1.jpg);
+  background-size: 100%;
+  height: 180px;
+  width: 180px;
+}
+.photo .photo2 {
+  background: url(/image/photos/p2.jpg);
+  background-size: 100%;
+}
+.photo .photo3 {
+  background: url(/image/photos/p3.jpg);
+  background-size: 100%;
+}
+.photo .photo4 {
+  background: url(/image/photos/p4.jpg) no-repeat;
+  background-size: 100%;
+}
+.photo .photo5 {
+  background: url(/image/photos/p5.jpg) no-repeat;
+  background-size: 100%;
+  margin-top: 20px;
+}
+.photo .photo6 {
+  background: url(/image/photos/p6.jpg) no-repeat;
+  background-size: 100%;
+  margin-top: 20px;
+}
+.photo .photo7 {
+  background: url(/image/photos/p7.jpg);
+  background-size: 100%;
+  margin-top: 20px;
+}
+.photo .photo8 {
+  background: url(/image/photos/p8.jpg);
+  background-size: 100%;
+  margin-top: 20px;
+}
+
+/*# sourceMappingURL=acceuil.css.map */

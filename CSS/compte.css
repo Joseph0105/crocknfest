@@ -1,0 +1,174 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "mephisto";
+  src: url("/police/mephisto.ttf");
+}
+@font-face {
+  font-family: "roboto-regular";
+  src: url("/police/roboto-regular.ttf");
+}
+/* font folder */
+body {
+  width: auto;
+  background: url(/image/fond.png) no-repeat;
+  background-attachment: fixed;
+}
+
+/* ELEMENTS PROPRETY */
+a {
+  text-decoration: none;
+  font-family: "mephisto";
+  font-size: 2.5em;
+  color: #d4cebd;
+}
+@media all and (max-width: 1024px) {
+  a {
+    font-size: 1.2em;
+  }
+}
+a:hover {
+  color: #aca07f;
+}
+
+h1, h2 {
+  font-family: "mephisto";
+  font-size: 2em;
+  color: #aca07f;
+}
+@media all and (max-width: 1024px) {
+  h1, h2 {
+    font-size: 1em;
+  }
+}
+
+.form--h1 {
+  color: #ab2816;
+  font-family: sans-serif;
+  font-size: 1em;
+}
+
+h2 {
+  color: #aca07f;
+}
+
+p label, .aside__text label {
+  color: #58503a;
+  font-family: sans-serif;
+  text-align: justify;
+  font-size: 1em;
+}
+@media all and (max-width: 1024px) {
+  p label, .aside__text label {
+    font-size: 0.8em;
+  }
+}
+
+.aside__text {
+  color: #aca07f;
+}
+
+em {
+  font-weight: bold;
+  font-style: normal;
+}
+
+strong {
+  color: #aca07f;
+}
+
+legend {
+  font-family: "mephisto";
+  color: #ab2816;
+  font-size: 1em;
+}
+
+fieldset {
+  background-color: #d4cebd;
+}
+
+label {
+  display: block;
+  float: left;
+  width: 50%;
+}
+
+select {
+  margin-left: 27%;
+}
+
+input, .input--invalid {
+  border-radius: 100rem;
+  border: 1px solid #ab2816;
+  padding: 0.5rem 1.5rem;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 600ms;
+}
+input:focus, .input--invalid:focus {
+  border: 2px solid #d8331c;
+}
+
+.input--invalid:not(:focus):invalid {
+  background-color: #f2a59b;
+  color: white;
+}
+
+/* END */
+/* BODY STRUCTURE */
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgba(20, 20, 20, 0.9);
+}
+
+.header__logo {
+  width: 15rem;
+  height: 15rem;
+}
+@media all and (max-width: 1024px) {
+  .header__logo {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+aside {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(40, 40, 40, 0.9);
+}
+
+section {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.form__1 {
+  width: 40%;
+}
+.form__1 .séparation {
+  width: 100%;
+  height: 1px;
+  background-color: #ab2816;
+}
+
+.form__2 {
+  align-self: center;
+  width: 30%;
+}
+
+fieldset {
+  border-radius: 10px;
+}
+
+.fieldset--connect {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 300px;
+}
+
+/*# sourceMappingURL=compte.css.map */

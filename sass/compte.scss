@@ -1,0 +1,152 @@
+@import "libs/mixins.scss";
+@import "libs/responsive.scss";
+
+@include font; /* font folder */
+
+$primary: #d4cebd;
+$secondary: #ab2816;
+$background: rgba(#141414, 0.9);
+$text--invalid: white;
+
+body {
+  @include body;
+}
+/* ELEMENTS PROPRETY */
+a {
+  text-decoration: none;
+  font-family: "mephisto";
+  font-size: 2.5em;
+  @media #{$small-screen} {
+    font-size: 1.2em;
+  }
+  color: $primary;
+  &:hover {
+    color: darken($primary, 20);
+  }
+}
+h1 {
+  font-family: "mephisto";
+  font-size: 2em;
+  color: darken($primary, $amount: 20);
+  @media #{$small-screen} {
+    font-size: 1em;
+  }
+}
+.form--h1 {
+  color: $secondary;
+  font-family: sans-serif;
+  font-size: 1em;
+}
+h2 {
+  @extend h1;
+  color: darken($primary, 20);
+}
+p label {
+  color: darken($primary, 50);
+  font-family: sans-serif;
+  text-align: justify;
+  font-size: 1em;
+  @media #{$small-screen} {
+    font-size: 0.8em;
+  }
+}
+.aside__text {
+  @extend p;
+  color: darken($primary, 20);
+}
+em {
+  font-weight: bold;
+  font-style: normal;
+}
+strong {
+  color: darken($primary, 20);
+}
+legend {
+  font-family: "mephisto";
+  color: $secondary;
+  font-size: 1em;
+}
+fieldset {
+  background-color: $primary;
+}
+label {
+  display: block;
+  float: left;
+  width: 50%;
+}
+select {
+  margin-left: 27%;
+}
+input {
+  border-radius: 100rem;
+  border: 1px solid $secondary;
+  padding: 0.5rem 1.5rem;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 600ms;
+  &:focus {
+    border: 2px solid lighten($secondary, 10);
+  }
+}
+
+.input--invalid {
+  @extend input;
+  &:not(:focus):invalid {
+    background-color: lighten($secondary, 40);
+    color: $text--invalid;
+  }
+}
+/* END */
+
+/* BODY STRUCTURE */
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: $background;
+}
+
+.header__logo {
+  width: 15rem;
+  height: 15rem;
+  @media #{$small-screen} {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+aside {
+  display: flex;
+  justify-content: space-around;
+  background-color: lighten($background, $amount: 8);
+}
+
+section {
+  display: flex;
+  justify-content: space-around;
+  background-color: lighten($background, $amount: 100);
+}
+.form__1 {
+  width: 40%;
+  .séparation {
+    width: 100%;
+    height: 1px;
+    background-color: $secondary;
+  }
+}
+
+.form__2 {
+  align-self: center;
+  width: 30%;
+}
+fieldset {
+  border-radius: 10px;
+}
+.fieldset--connect {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 300px;
+}
